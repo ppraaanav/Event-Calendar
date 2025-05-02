@@ -1,0 +1,97 @@
+/* Calendar Container */
+.calendar-container {
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+}
+
+/* Calendar Grid Layout */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.day-name {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    grid-column: 1 / -1;
+}
+
+/* Day Box Styles */
+.day-box {
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.day-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.day-box.empty {
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+.date-number {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .calendar-grid {
+        gap: 5px;
+    }
+    
+    .day-name {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+    
+    .day-box {
+        padding: 5px;
+    }
+    
+    .date-number {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .calendar-controls h4 {
+        font-size: 1.2rem;
+    }
+    
+    .calendar-controls button {
+        padding: 5px 10px;
+    }
+}
+
+
+
